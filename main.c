@@ -202,8 +202,22 @@ int main()
                 printf("Enter x y width height: ");
                 scanf("%d%d%d%d",&x,&y,&width,&height);
 
-                drawRectangle(x,y,width,height);
+                Shape s;
 
+                s.id = count + 1;
+                s.type = 1;
+
+                s.x1 = x;
+                s.y1 = y;
+
+                s.width = width;
+                s.height = height;
+
+                shapes[count] = s;
+
+                count++;
+
+                redrawCanvas();
                 break;
             }
 
@@ -214,7 +228,22 @@ int main()
                 printf("Enter x1 y1 x2 y2: ");
                 scanf("%d%d%d%d",&x1,&y1,&x2,&y2);
 
-                drawLine(x1,y1,x2,y2);
+                Shape s;
+
+                s.id = count + 1;
+                s.type = 2;
+
+                s.x1 = x1;
+                s.y1 = y1;
+
+                s.x2 = x2;
+                s.y2 = y2;
+
+                shapes[count] = s;
+
+                count++;
+
+                redrawCanvas();
 
                 break;
             }
@@ -226,8 +255,21 @@ int main()
                 printf("Enter center_x center_y radius: ");
                 scanf("%d%d%d",&xc,&yc,&r);
 
-                drawCircle(xc,yc,r);
+                Shape s;
 
+                s.id = count + 1;
+                s.type = 3;
+
+                s.x1 = xc;
+                s.y1 = yc;
+
+                s.radius = r;
+
+                shapes[count] = s;
+
+                count++;
+
+                redrawCanvas();
                 break;
             }
 
@@ -242,7 +284,25 @@ int main()
                       &x2,&y2,
                       &x3,&y3);
 
-                drawTriangle(x1,y1,x2,y2,x3,y3);
+                Shape s;
+
+                s.id = count + 1;
+                s.type = 4;
+
+                s.x1 = x1;
+                s.y1 = y1;
+
+                s.x2 = x2;
+                s.y2 = y2;
+
+                s.x3 = x3;
+                s.y3 = y3;
+
+                shapes[count] = s;
+
+                count++;
+
+                redrawCanvas();
 
                 break;
             }
@@ -265,6 +325,13 @@ int main()
 
             case 7:
             {
+                displayCanvas();
+
+                break;
+            }
+
+            case 8:
+            {
                 printf("Exiting...\n");
 
                 break;
@@ -278,7 +345,7 @@ int main()
             }
         }
 
-    }while(choice != 7);
+    }while(choice != 8);
 
     return 0;
 }
