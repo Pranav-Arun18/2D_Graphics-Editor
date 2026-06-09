@@ -203,20 +203,14 @@ int main()
                 scanf("%d%d%d%d",&x,&y,&width,&height);
 
                 Shape s;
-
                 s.id = count + 1;
                 s.type = 1;
-
                 s.x1 = x;
                 s.y1 = y;
-
                 s.width = width;
                 s.height = height;
-
                 shapes[count] = s;
-
                 count++;
-
                 redrawCanvas();
                 break;
             }
@@ -229,22 +223,15 @@ int main()
                 scanf("%d%d%d%d",&x1,&y1,&x2,&y2);
 
                 Shape s;
-
                 s.id = count + 1;
                 s.type = 2;
-
                 s.x1 = x1;
                 s.y1 = y1;
-
                 s.x2 = x2;
                 s.y2 = y2;
-
                 shapes[count] = s;
-
                 count++;
-
                 redrawCanvas();
-
                 break;
             }
 
@@ -256,19 +243,13 @@ int main()
                 scanf("%d%d%d",&xc,&yc,&r);
 
                 Shape s;
-
                 s.id = count + 1;
                 s.type = 3;
-
                 s.x1 = xc;
                 s.y1 = yc;
-
                 s.radius = r;
-
                 shapes[count] = s;
-
                 count++;
-
                 redrawCanvas();
                 break;
             }
@@ -285,67 +266,52 @@ int main()
                       &x3,&y3);
 
                 Shape s;
-
                 s.id = count + 1;
                 s.type = 4;
-
                 s.x1 = x1;
                 s.y1 = y1;
-
                 s.x2 = x2;
                 s.y2 = y2;
-
                 s.x3 = x3;
                 s.y3 = y3;
-
                 shapes[count] = s;
-
                 count++;
-
                 redrawCanvas();
-
                 break;
             }
 
             case 5:
             {
                 displayCanvas();
-
                 break;
             }
 
             case 6:
             {
                 clearCanvas();
-
                 printf("Canvas Cleared\n");
-
                 break;
             }
 
             case 7:
             {
                 displayCanvas();
-
                 break;
             }
 
             case 8:
             {
                 printf("Exiting...\n");
-
                 break;
             }
 
             default:
             {
                 printf("Invalid Choice\n");
-
                 break;
             }
         }
 
     }while(choice != 8);
-
     return 0;
 }
